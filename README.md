@@ -1,3 +1,5 @@
+![icon](./icon.png)
+
 ### About
 
 Simple workaround for a bug in Contacts.app that pads copied phone numbers with zero-width characters, like this:
