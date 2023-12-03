@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.luckman212.copy_workaround</string>
+	<key>connections</key>
+	<dict>
+		<key>0F15102C-62BD-40F4-84D2-1E727E894CC2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>D9CDCE89-9AD5-47C2-B1EC-6B9E4A14EC14</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>91294D58-2463-4DC2-B2B5-F185877F4791</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0F15102C-62BD-40F4-84D2-1E727E894CC2</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D9CDCE89-9AD5-47C2-B1EC-6B9E4A14EC14</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2E215A41-2BC4-4EAE-85B0-EB0B6F99C4E0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>luckman212</string>
+	<key>description</key>
+	<string>Workaround for Contacts.app bug</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Copy Workaround</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>8</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>C</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.AddressBook</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>91294D58-2463-4DC2-B2B5-F185877F4791</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>D9CDCE89-9AD5-47C2-B1EC-6B9E4A14EC14</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query} copied to clipboard!</string>
+				<key>title</key>
+				<string>{const:alfred_workflow_name}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>2E215A41-2BC4-4EAE-85B0-EB0B6F99C4E0</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>tr -cd '()\ \-;[0-9]' &lt;&lt;&lt;"$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0F15102C-62BD-40F4-84D2-1E727E894CC2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>### About
+
+Simple workaround for a bug in Contacts.app that pads copied phone numbers with zero-width characters, like this:
+
+![screenshot](./zwsp.png)
+
+### References
+
+- [Zero-width characters embedded in phone number whenever they are copied from the macOS address book](https://apple.stackexchange.com/questions/337101/zero-width-characters-embedded-in-phone-number-whenever-they-are-copied-from-the)
+- specifically: [my answer](https://apple.stackexchange.com/a/350404/100302)</string>
+	<key>uidata</key>
+	<dict>
+		<key>0F15102C-62BD-40F4-84D2-1E727E894CC2</key>
+		<dict>
+			<key>note</key>
+			<string>filter digits and valid dialing chars only</string>
+			<key>xpos</key>
+			<real>255</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>2E215A41-2BC4-4EAE-85B0-EB0B6F99C4E0</key>
+		<dict>
+			<key>xpos</key>
+			<real>580</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>91294D58-2463-4DC2-B2B5-F185877F4791</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>3</integer>
+			<key>xpos</key>
+			<real>50</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+		<key>D9CDCE89-9AD5-47C2-B1EC-6B9E4A14EC14</key>
+		<dict>
+			<key>note</key>
+			<string>(does not auto-paste)</string>
+			<key>xpos</key>
+			<real>420</real>
+			<key>ypos</key>
+			<real>50</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>1.0</string>
+	<key>webaddress</key>
+	<string>https://github.com/luckman212/alfred_copy_workaround</string>
+</dict>
+</plist>
