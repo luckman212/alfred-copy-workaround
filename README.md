@@ -1,10 +1,10 @@
-![icon](./icon.png)
+<img src="./icon.png" width=128>
 
 ### About
 
 Simple workaround for a bug in Contacts.app that pads copied phone numbers with zero-width characters, like this:
 
-![screenshot](./zwsp.png)
+<img src="./zwsp.png" width=410>
 
 ### References
 
